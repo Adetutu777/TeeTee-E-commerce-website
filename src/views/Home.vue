@@ -1,18 +1,66 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template class="home-sec">
+     <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 fir-col" id="pix-first">
+          <h1 class="purchase">Each Purchase will be made with pleasure</h1>
+          <p class="global pt-3">We work with global brands and have  created <br> an application for you to get started</p>
+          <p class="global pt-3">We work with global brands and have  created <br> an application for you to get started</p>
+        </div>
+        <div class="col-md-6">
+        
+          <img src="../../src/assets/Img/shopping-pix.png" class="" style="width: 75%;" alt="">
+        </div>
+
+        
+      </div>
+      <div class="class-btn">
+        <a href="#">
+      <button class="shop-btn ">Shop Now</button>
+    </a>
+    </div>
+    </div>
+  </section>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
 </script>
+
+<style scoped>
+  .home-sec{
+    background-color: aliceblue;
+  }
+
+.fir-col{
+    padding-top: 9rem;
+}
+
+.purchase{
+    font-size: 3rem;
+}
+
+.global{
+    font-size: 1.2rem;
+
+}
+
+.shop-btn{
+    background: rgb(226, 27, 226);
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid rgb(226, 27, 226);
+    border-radius: 1rem;
+}
+
+.class-btn{
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 480px) {
+    #pix-first{
+      order: 1;
+    }
+    }
+</style>

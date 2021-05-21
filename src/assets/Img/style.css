@@ -1,0 +1,68 @@
+
+.fir-col{
+    padding-top: 9rem;
+}
+
+.purchase{
+    font-size: 3rem;
+}
+
+.global{
+    font-size: 1.2rem;
+
+}
+
+.shop-btn,
+.btn-primary{
+    background: rgb(226, 27, 226);
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid rgb(226, 27, 226);
+    border-radius: 1rem;
+}
+
+.class-btn{
+    margin-bottom: 5rem;
+}
+
+
+/* contact.css */
+
+.row-one{
+    border-radius: 10px;
+}
+.form-control{
+     -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  height: 54px;
+  font-size: 18px;
+  font-weight: 300;
+  border-radius: 10px;
+}
+#message {
+  height: 12rem;
+}
+/* .btn.btn-md {
+  padding: 10px 25px !important;
+} */
+/* .btn-primary {
+  background: #da1212 !important;
+  color: #fff !important;
+  border: 2px solid #da1212 !important;
+border-radius: 0px !important;
+} */
+
+
+
+@media screen and (max-width: 480px) {
+    #pix-first{
+      order: 1;
+    }
+ 
+    
+    }
