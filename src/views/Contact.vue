@@ -1,4 +1,4 @@
-<template class="cont-sec">
+<template>
       <section clss="cont-sec ">
                 <div class="container">
                     <h2 class="text-center">Get in touch</h2>
@@ -68,9 +68,6 @@
 
 
 <style scoped>
-.cont-sec{
-    background-color: aliceblue;
-  }
 
 .btn-primary{
     background: rgb(226, 27, 226);

@@ -1,4 +1,4 @@
-<template class="home-sec">
+<template>
      <section>
     <div class="container">
       <div class="row">
@@ -11,16 +11,16 @@
         
           <img src="../../src/assets/Img/shopping-pix.png" class="" style="width: 75%;" alt="">
         </div>
-
-        
       </div>
-      <div class="class-btn">
-        <a href="#">
-      <button class="shop-btn ">Shop Now</button>
-    </a>
+      
+      <div class="class-btn mt-3">
+     <router-link :to="{name: 'Catalog'}" class="shop-btn">Shop Now</router-link>
+    
     </div>
     </div>
+    <Catalog/>
   </section>
+
 </template>
 
 <script>
@@ -28,9 +28,6 @@
 </script>
 
 <style scoped>
-  .home-sec{
-    background-color: aliceblue;
-  }
 
 .fir-col{
     padding-top: 9rem;
@@ -52,6 +49,7 @@
     font-size: 1rem;
     border: 1px solid rgb(226, 27, 226);
     border-radius: 1rem;
+    text-decoration: none;
 }
 
 .class-btn{
