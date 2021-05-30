@@ -1,24 +1,39 @@
 <template>
-<div class="container">
-<div class="row">
-<!-- <img src="{{$route.params.image}}" alt=""> -->
-<!-- <img :src="data.image"" alt=""> -->
+            <div class="container">
+            <div class="row">
+                    
+            <p>{{$route.params.id}}</p>
 
-        
- <p>{{$route.params.id}}</p>
+            
+          <div class="">
+           <button class="text-dark" style="border:1px solid red">Add to cart</button></div>
+            </div>
 
- <button>Add to cart</button>
-</div>
+            </div>
 
-</div>
 
 </template>
 
-<script>
-export default {
 
-}
+
+<script>
+
+
+
+export default ({
+ 
+
+  setup() {
+
+
+
+// return {myCart}
+      
+  },
+
+})
 </script>
+
 
 <style>
 

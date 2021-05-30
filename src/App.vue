@@ -17,8 +17,10 @@
 		
         </div>
 		<div class="navbar-nav ml-auto social ">
-    <div class="pt-4 mr-3"> 
-    <router-link :to="{nae: 'Contact'}" class="nav-lik text-dark" style="background:aliceblue">Cart</router-link> 
+    <div class="mr-3" style="margin-top:1.2rem"> 
+    <router-link :to="{nae: 'Contact'}" class="nav-lik text-dark" style="background:aliceblue">
+   <img class="" style="width:28px" src="../src/assets/Img/shopping-cart.svg" alt="">
+    </router-link> 
     
     
     </div>
@@ -34,23 +36,28 @@
 	</div>
         </nav>
   </div>
-  <!-- <transition name="moveInUp">
-         <router-view/>
-  </transition> -->
+ 
   <router-view/>
-  <Catalog/>
+
+   
 </template>
 
 
 
 <script>
-    import  { Catalog } from './views/catalog/Catalog';
+      // import {Catalog} from './views/catalog/Catalog.vue'
+    // import  { Catalog } from './views/catalog/Catalog.vue';
+    // import  { description} from './views/catalog/description.vue';
+// import Description from './views/catalog/description.vue';
+// import cart from './views/catalog/cart'
   
 
 export default {
     name: 'app',
     components: {
-        Catalog
+        // Catalog,
+        // Description
+     
        
     },
 
@@ -58,7 +65,8 @@ export default {
        
 
         return {
-           Catalog
+          //  Catalog
+         
         }
     }
 }

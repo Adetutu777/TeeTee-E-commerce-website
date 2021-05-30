@@ -18,15 +18,6 @@
                             <p>anuoluwapotutu@gmail.com</p>
                         </div>
                     </div>
-
-                    <!-- <div class="row bg-white">
-                        <div class="col-md-6">
-
-                        </div>
-                        <div class="col-md-6"></div>
-                    </div> -->
-
-                    
             
                     <form>
                         

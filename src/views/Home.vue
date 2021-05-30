@@ -18,7 +18,8 @@
     
     </div>
     </div>
-    <Catalog/>
+    
+  <Catalog/>
   </section>
 
 </template>

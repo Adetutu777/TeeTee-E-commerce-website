@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Catalog from '../views/catalog/Catalog.vue'
 import description from '../views/catalog/description.vue'
+import cart from '../views/catalog/cart.vue'
 import Contact from '../views/Contact.vue'
 
 const routes = [
@@ -30,11 +31,17 @@ const routes = [
     name: 'Contact',
     component: Contact
   },
+  
   {
     path: '/catalog/:id',
     name: 'description',
     component: description
-  }
+  },
+  // {
+  //   path: '/cart',
+  //   name: 'cart',
+  //   component: cart
+  // }
 ]
 
 const router = createRouter({
