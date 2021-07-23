@@ -1,8 +1,9 @@
+
 <template>
      <section class="pt-5 pb-5">
         <div class="container" >
             <div class="row" >
-                <div class="col-md-3 mt-3" v-for= "data in myCatalog" :key="data.id">
+                <div class="col-md-3 mt-3" v-for= "data in products" :key="data.id">
                 <router-link :to="{name: 'description', params: {id: data.description}}" class="descr-prod">
                   <div class="card" style="background: aliceblue;">
              <img class="img-img w-50 text-center"  :src="data.image" alt="">
@@ -11,8 +12,8 @@
                   </div>
                   </router-link>
 
-                     <button v-on:click="addItem(data)" class="text-dark" style="border:1px solid red">Add to cart</button>
-                  
+                     <!-- <button v-on:click="addItem(data)" class="text-dark" style="border:1px solid red">Add to cart</button>
+                   -->
                 
                 </div>
                 
@@ -28,33 +29,29 @@
 
   
 <script>
-import { computed, onMounted, ref } from 'vue';
- import { mapState } from 'vuex';
-//  import store from 'vuex'
- import store from "../../store/store"
- 
+import { computed } from 'vue'
+import { useStore } from 'vuex'
+
 
 export default {
-  name: 'Catalog',
-  setup() {
+  setup () {
+    const store = useStore()
+    console.log('kennybaby', store.state?.products)
+    return {
+      // access a state in computed function
+      products: computed(() => store.state?.products),
+      //  console.log(products),
+       
 
-    // let myCatalog=ref('')
-    // const aa = ref('')
-   
-    onMounted(() => {
-       $store.dispatch('getProducts')
-      console.log('store')
-    })
-
-     const getPost = computed(() => 
-     mapState([
-        'myCatalog'
-    ]),
-     
-     )
-    return{myCatalog, getPost}
-  },
+      // access a getter in computed function
+      getProducts: computed(() => store.getters.getProducts
+      
+      )
+    }
+  }
 }
+
+
 </script>
 
 

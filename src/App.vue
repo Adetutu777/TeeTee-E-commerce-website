@@ -50,34 +50,34 @@
     // import  { description} from './views/catalog/description.vue';
 // import Description from './views/catalog/description.vue';
 // import cart from './views/catalog/cart'
+import Catalog from './views/catalog/Catalog'
+import store from './store/store'
+import { onMounted } from '@vue/runtime-core'
+import { useStore } from 'vuex'
   
 
 export default {
+  store,
     name: 'app',
-    components: {
-        // Catalog,
-        // Description
-     
-       
-    },
+    components: { Catalog},
 
     setup() {
-       
+        const store = useStore()
+  onMounted(() => {
+      // console.log('mounted!')
+      store.dispatch('setProducts')
+      // console.log( store.dispatch('setProducts'))
+      // console.log(setProducts)
 
-        return {
-          //  Catalog
+    })
+        // return {
+        //   //  Catalog
          
-        }
+        // }
     }
 }
 
-
 </script>
-
-
-
-
-
 
 <style>   
   #app {

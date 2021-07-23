@@ -55,23 +55,91 @@
 // export default store
 
 
+// import Vue from 'vue';
+// import Vuex from 'vuex';
+
+
+// Vue.use(Vuex);
+
+// import state from './state';
+// import * as getters from './getters'
+// import * as mutations from './mutations'
+// import * as actions from './actions'
+
+// export default new Vuex.Store({
+//     state,
+//     getters,
+//     mutations,
+//     actions
+// });
+
+
+// import { createStore } from "vuex";
+// import state from './state';
+// import * as getters from './getters'
+// import * as mutations from './mutations'
+// import * as actions from './actions'
+
+// const store = createStore({
+//    state:{
+//       name: "Vue"
+//    }
+//     state,
+//     getters,
+//     mutations,
+//     actions
+// })
+
+// export default store
+
+// import { createStore } from 'vuex';
+
+// export default createStore({
+//     state: { 
+  
+//         Catalog: []
+//     },
+    
+//     mutations: {
+      
+//   },
+//     actions: {
+      
+//   },
+//     modules: {
+      
+//   },
+// });
+
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex, { storeKey } from 'vuex';
+import axios from 'axios'
 
+const url = "https://fakestoreapi.com/products";
+// Vue.use(Vuex);
 
-Vue.use(Vuex)
-
-import state from './state';
-import * as getters from './getters'
-import * as mutations from './mutations'
-import * as actions from './actions'
 
 export default new Vuex.Store({
-    state,
-    getters,
-    mutations,
-    actions
-})
+state : {
+        products: []  
+    },
 
+    mutations: {
+       setProducts(state, products) {
+        state.products = products
+
+        }
+    },
+actions: {
+    async setProducts(state) {
+    const results = await axios.get(url);
+        state.commit('setProducts', results.data)
+        
+        }
+    },
+    getters: {
+        getProducts: state => state.products
+    }
+})
 
 
