@@ -38,18 +38,11 @@
   </div>
  
   <router-view/>
-
-   
 </template>
 
 
 
 <script>
-      // import {Catalog} from './views/catalog/Catalog.vue'
-    // import  { Catalog } from './views/catalog/Catalog.vue';
-    // import  { description} from './views/catalog/description.vue';
-// import Description from './views/catalog/description.vue';
-// import cart from './views/catalog/cart'
 import Catalog from './views/catalog/Catalog'
 import store from './store/store'
 import { onMounted } from '@vue/runtime-core'
@@ -62,7 +55,7 @@ export default {
     components: { Catalog},
 
     setup() {
-        const store = useStore()
+        // const store = useStore()
   onMounted(() => {
       // console.log('mounted!')
       store.dispatch('setProducts')
@@ -105,8 +98,8 @@ color:black
 }
 
 #nav a.router-link-exact-active {
-  color: whitesmoke;
-  background: crimson;
+  color: white;
+  background: rgb(252, 83, 252);
   border-radius: .5rem;
 }
 
