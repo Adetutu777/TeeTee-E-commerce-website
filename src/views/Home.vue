@@ -8,7 +8,7 @@
           <p class="global pt-3">We work with global brands and have  created <br> an application for you to get started</p>
 
           <div class="class-btn mt-3 pt-4">
-     <router-link :to="{name: 'Catalog'}" class="shop-btn">Shop Now</router-link>
+     <router-link :to="{ name: 'Catalog' }" class="shop-btn">Shop Now</router-link>
     
     </div>
         </div>
@@ -17,8 +17,6 @@
           <img src="../../src/assets/Img/shopping-pix.png" class="" style="width: 75%;" alt="">
         </div>
       </div>
-      
-      
     </div>
     
   <Catalog/>
@@ -27,6 +25,14 @@
 </template>
 
 <script>
+export default {
+    name: 'Home',
+    // components: { Catalog},
+  setup(){
+    
+
+  },
+}
 
 </script>
 

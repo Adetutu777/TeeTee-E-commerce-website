@@ -34,9 +34,10 @@ import { useStore } from 'vuex'
 
 
 export default {
+
   setup () {
     const store = useStore()
-    console.log('kennybaby', store.state?.products)
+    console.log('helloWorld', store.state?.products)
     return {
       // access a state in computed function
       products: computed(() => store.state?.products),
@@ -44,7 +45,13 @@ export default {
        
 
       // access a getter in computed function
-      getProducts: computed(() => store.getters.getProducts
+      getProducts: computed(() => 
+      store.getters.getProducts
+    //   ...mapGetters([
+    //   'getproducts',
+    //   'anotherGetter',
+    //   // ...
+    // ])
       
       )
     }
@@ -53,9 +60,6 @@ export default {
 
 
 </script>
-
-
-
 
 
 <style scoped>
